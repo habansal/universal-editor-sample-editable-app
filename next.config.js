@@ -9,7 +9,6 @@ const nextConfig = {
   images: {
     minimumCacheTTL: 31536000,
   },
-  target: "serverless",
 }
 
 module.exports = nextConfig
