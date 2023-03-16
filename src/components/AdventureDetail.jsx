@@ -73,33 +73,36 @@ function AdventureDetailRender({
 							   }) {
 	return (<div>
 			<h1 className="adventure-detail-title" itemProp="title" itemType="text">{title}</h1>
+			{/*<div className="adventure-detail-info">*/}
+			{/*	<div className="adventure-detail-info-label">Activity</div>*/}
+			{/*	<div className="adventure-detail-info-description" itemProp='activity' itemType="text">{activity}</div>*/}
+			{/*	<div className="adventure-detail-info-label">Type</div>*/}
+			{/*	<div className="adventure-detail-info-description" itemProp='adventureType'*/}
+			{/*		 itemType="text">{adventureType}</div>*/}
+			{/*	<div className="adventure-detail-info-label">Trip Length</div>*/}
+			{/*	<div className="adventure-detail-info-description" itemProp='tripLength'*/}
+			{/*		 itemType="text">{tripLength}</div>*/}
+			{/*	<div className="adventure-detail-info-label">Group Size</div>*/}
+			{/*	<div className="adventure-detail-info-description" itemProp='groupSize'*/}
+			{/*		 itemType="text">{groupSize}</div>*/}
+			{/*	<div className="adventure-detail-info-label">Difficulty</div>*/}
+			{/*	<div className="adventure-detail-info-description" itemProp='difficulty'*/}
+			{/*		 itemType="text">{difficulty}</div>*/}
+			{/*</div>*/}
+
 			<div className="adventure-detail-info">
-				<div className="adventure-detail-info-label">Activity</div>
-				<div className="adventure-detail-info-description" itemProp='activity' itemType="text">{activity}</div>
-				<div className="adventure-detail-info-label">Type</div>
-				<div className="adventure-detail-info-description" itemProp='adventureType'
-					 itemType="text">{adventureType}</div>
-				<div className="adventure-detail-info-label">Trip Length</div>
-				<div className="adventure-detail-info-description" itemProp='tripLength'
-					 itemType="text">{tripLength}</div>
-				<div className="adventure-detail-info-label">Group Size</div>
-				<div className="adventure-detail-info-description" itemProp='groupSize'
-					 itemType="text">{groupSize}</div>
-				<div className="adventure-detail-info-label">Difficulty</div>
-				<div className="adventure-detail-info-description" itemProp='difficulty'
-					 itemType="text">{difficulty}</div>
-			</div>
-			<div className="adventure-detail-content">
-				<img className="adventure-detail-primaryimage"
-					 src={`${getPublishHost()}${primaryImage._path}`} alt={title} itemType="image"/>
-				<div itemProp="description"
-					 itemType="richtext">{mapJsonRichText(description.json, customRenderOptions(references))}</div>
+				{/*<div itemProp="description"*/}
+				{/*	 itemType="richtext">{mapJsonRichText(description.json, customRenderOptions(references))}</div>*/}
 				<h2>Itinerary</h2>
 				<hr/>
 
 				{/* Render the itinerary without any custom render options (just use defaults) */}
 				<div itemProp="itinerary" itemType="richtext"
 					 className="adventure-detail-itinerary">{mapJsonRichText(itinerary.json)}</div>
+			</div>
+			<div className="adventure-detail-content">
+				<img className="adventure-detail-primaryimage"
+					 src={`${getPublishHost()}${primaryImage._path}`} alt={title} itemType="image"/>
 			</div>
 		</div>
 	);
@@ -135,6 +138,7 @@ function getAdventure(data) {
 /**
  * Example of using a custom render for in-line references in a multi line field
  */
+/*
 function customRenderOptions(references) {
 
 	const renderReference = {
@@ -173,5 +177,5 @@ function customRenderOptions(references) {
 		},
 	};
 }
-
+*/
 export default AdventureDetail;
