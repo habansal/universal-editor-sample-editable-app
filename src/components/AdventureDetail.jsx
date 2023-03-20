@@ -93,7 +93,7 @@ function AdventureDetailRender({
 			<div className="adventure-detail-info">
 				{/*<div itemProp="description"*/}
 				{/*	 itemType="richtext">{mapJsonRichText(description.json, customRenderOptions(references))}</div>*/}
-				<h2>Itinerary</h2>
+				{/*<h2>Itinerary</h2>*/}
 				<hr/>
 
 				{/* Render the itinerary without any custom render options (just use defaults) */}
